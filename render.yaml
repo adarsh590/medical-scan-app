@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: medical-scan-app
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: ./start.sh
+    envVars:
+      - key: PORT
+        value: 10000
+    region: oregon
