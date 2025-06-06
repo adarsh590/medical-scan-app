@@ -19,11 +19,11 @@ export default function MedicalScanUploader() {
     formData.append("file", selectedFile);
 
     try {
-      const response = await axios.post("http://localhost:8000/predict", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+        const response = await axios.post("/predict", formData, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          });
       setResult(response.data);
     } catch (err) {
       console.error("Upload failed:", err);
